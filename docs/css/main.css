@@ -51,9 +51,24 @@ body {
     font-size: 0.9375rem;
 }
 
+header {
+    margin-bottom: 1rem;
+}
+
+footer {
+    margin-top: 1rem;
+}
+
 .container {
     margin: auto;
-    max-width: 95%;
+    width: 95%;
+    max-width: 1200px;
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -73,18 +88,20 @@ body {
     display: flex;
     margin: auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color: var(--color-blue-desat);
 }
 
 .card__image {
     order: 1;
     background-color: var(--color-violet-soft);
+    flex: 0 0 40%;
 }
 
 .card__img {
     mix-blend-mode: overlay;
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -98,5 +115,6 @@ body {
 
     .card__image {
         order: 0;
+        flex: 0 0 33%;
     }
 }

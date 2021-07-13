@@ -29,11 +29,14 @@
   </header>
   <main>
 
-    <div class="">
+    <div class="container">
       <div class="card card-mobile">
-        <div class="card__image">
-          <img src="./images/image-header-desktop.jpg" alt="" class="card__img">
-        </div>
+
+        <picture class="card__image">
+          <source media="(max-width: 800px)" srcset="./images/image-header-mobile.jpg">
+          <img class="card__img" src="./images/image-header-desktop.jpg" alt="Hero">
+        </picture>
+
         <div class="card__content">
           <h2 class="card__heading">Get <span class="emphasize">insights</span> that help your business grow.</h2>
           <p class="card__text">
