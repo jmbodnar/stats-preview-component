@@ -37,7 +37,7 @@
 /* ----- End source default styles -----  */
 
 body {
-    /* For general display / background */
+    /* For general display */
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-auto-flow: column;
@@ -54,4 +54,49 @@ body {
 .container {
     margin: auto;
     max-width: 95%;
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.emphasize {
+    color: var(--color-violet-soft);
+}
+
+.card {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--color-blue-desat);
+}
+
+.card__image {
+    order: 1;
+    background-color: var(--color-violet-soft);
+}
+
+.card__img {
+    mix-blend-mode: overlay;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+    .card-mobile {
+        margin: auto;
+        max-width: 375px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card__image {
+        order: 0;
+    }
 }
