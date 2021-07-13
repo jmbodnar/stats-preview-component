@@ -1,6 +1,5 @@
 :root {
     /* Variables */
-
     /* ----- Type ----- */
     --font-inter: "Inter", sans-serif;
     --font-lexendDeca: "Lexend Deca", sans-serif;
@@ -25,10 +24,34 @@
     --color-white-trans60: hsla(0, 0%, 100%, 0.6);
 }
 
+/* ---- Source default styles ----- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ----- End source default styles -----  */
+
 body {
+    /* For general display / background */
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-auto-flow: column;
+    min-height: 100vh;
+
+    /* Base styles */
     font-family: var(--font-inter);
     font-weight: var(--weight-400);
     background-color: var(--color-blue-dark);
     color: var(--color-white-trans75);
-    font-size: .9375rem;
+    font-size: 0.9375rem;
+}
+
+.container {
+    margin: auto;
+    max-width: 95%;
 }
