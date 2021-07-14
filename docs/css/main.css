@@ -95,7 +95,6 @@ footer {
 .card__image {
     order: 1;
     background-color: var(--color-violet-soft);
-    flex: 0 0 40%;
 }
 
 .card__img {
@@ -105,7 +104,7 @@ footer {
     object-fit: cover;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .card-mobile {
         margin: auto;
         max-width: 375px;
@@ -115,11 +114,29 @@ footer {
 
     .card__image {
         order: 0;
-        flex: 0 0 33%;
     }
 
     .card__content {
         padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    .card {
+        max-height: 500px;
+    }
+
+    .card__image {
+        flex: 0 0 50%;
+    }
+
+    .card__content {
+        padding: 3rem 4rem;
+    }
+
+    .card__list {
+        display: flex;
+        gap: 1rem;
     }
 }
 
@@ -133,20 +150,23 @@ footer {
 
 .card__content {
     color: var(--color-white-trans60);
+    letter-spacing: 0.05ch;
 }
 
 .card__list {
     list-style-type: none;
     padding: 0;
     margin-top: 2em;
+    letter-spacing: 0.15ch;
 }
 
 .card__listitem {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     font-variant: small-caps;
 }
 
 .listitemLead {
     display: block;
     font-size: 1.5em;
+    letter-spacing: initial;
 }
